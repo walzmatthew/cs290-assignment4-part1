@@ -11,7 +11,7 @@ $requests = array();
 if ($_SERVER['REQUEST_METHOD'] === 'GET') { //if GET type request received
 	$requests['Type'] = 'GET'; //set Type to GET in $requests
 	if (count($_GET) > 0) { //if at least 1 value/pair received
-	    foreach ($_GET as $key => $value) {
+	    foreach ($_GET as $key => $value) { //iterate through each key/value pair in GET array
 		    $requests['parameters'][$key] = $value; //save value pairs in $requests['parameters']
 	    }
 	}
@@ -20,8 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') { //if GET type request received
 	}
 	echo json_encode($requests);
 }
-if (count($_POST) > 0) {
-    echo 'POST request';
-}
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { //if POST type request received
+	$requests['Type'] = 'POST'; //set Type to POST in $requests
+	if (count($_POST) > 0) { //if at least 1 value/pair received
+	    foreach ($_POST as $key => $value) { //iterate through each key/value pair in POST array
+		    $requests['parameters'][$key] = $value; //save value pairs in $requests['parameters']
+	    }
+	}
+	else { //0 value/pairs received
+	    $requests['parameters'] = 'null';
+	}
+	echo json_encode($requests);
+}
 ?>

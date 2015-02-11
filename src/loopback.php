@@ -1,7 +1,7 @@
 <?php
-//error reporting code
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error reporting code. commented out once code is working properly
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 //create empty array to hold request type and value pairs
 $requests = array();

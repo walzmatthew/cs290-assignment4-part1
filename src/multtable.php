@@ -1,6 +1,7 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//create HTML document up to <body>
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,8 @@ echo '<!DOCTYPE html>
 </head>
 <body>';
 
-
 //Error check input GET values and create a table if values are appropriate
+//check variables
 $good_inputs = true;
 $check_multiplicand = true;
 $check_multiplier = true;
@@ -89,7 +90,7 @@ if ($check_multiplier) { //true if both min and max multipliers are integers
 	}
 }
 
-//Create multiplication table is all inputs are received and all inputs are valid
+//Create multiplication table if all inputs are received and all inputs are valid
 if ($good_inputs) { //true if all inputs have been received and all are integers
     $rows = (int)$_GET['max-multiplicand'] - (int)$_GET['min-multiplicand'] + 1;
 	$cols = (int)$_GET['max-multiplier'] - (int)$_GET['min-multiplier'] + 1;
@@ -109,7 +110,7 @@ if ($good_inputs) { //true if all inputs have been received and all are integers
 	for ($i = 0; $i < $rows; $i++) {//in each row
 	    $row_value = (int)$_GET['min-multiplicand'] + $i; //calculate row multiplicand
 		echo "<tr>
-		<th>$row_value</th>"; //create row place this value in first column
+		<th>$row_value</th>"; //create row and place multiplicand value in first column
 		for ($j = 0; $j < $cols; $j++) {//iterate through each column in the row
 		    $col_value = (int)$_GET['min-multiplier'] + $j; //calculate column multiplier
 			$cell = $row_value * $col_value; //calculate product for value of cell
@@ -121,6 +122,7 @@ if ($good_inputs) { //true if all inputs have been received and all are integers
 	</table>';
 }	
 
+//add closing tags to complete HTML document
 echo '</body>
 </html>';
 ?>

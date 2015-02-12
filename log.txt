@@ -1,0 +1,37 @@
+Start: Mon, 9 Feb 2015 16:55:00 -0800
+End: Mon, 9 Feb 2015 16:55:46 -0800
+Tasks: Initial commit
+
+Start: Mon, 9 Feb 2015 16:55:46 -0800
+End: Mon, 9 Feb 2015 17:01:29 -0800
+Tasks: Created new required files for assignment 4 - part 1. All files are empty
+
+Start: Mon, 9 Feb 2015 18:37:00 -0800
+End: Mon, 9 Feb 2015 20:37:44 -0800
+Tasks: multtable.php successfully creates html document and verifies that the 4 required parameters are received and are integers. Next iteration to verify that min < max for both cases.
+
+Start: Tue, 10 Feb 2015 17:20:00 -0800
+End: Tue, 10 Feb 2015 17:52:36 -0800
+Tasks: Completed multtable.php. Added check of min < max for both multiplicand/multiplier. Added a for loop and a pair of nested for loops to create table and subsequest <th> and <td> elements as directed.
+
+Start: Tue, 10 Feb 2015 17:53:00 -0800
+End: Tue, 10 Feb 2015 17:57:57 -0800
+Tasks: Commented out error reporting and corrected typos in various comments within multtable.php
+
+Start: Tue, 10 Feb 2015 17:58:00 -0800
+End: Tue, 10 Feb 2015 18:45:04 -0800
+Tasks: Committing loopback.php. Currently the page interprets whether or not a GET or POST request was sent. If GET request than it checks that at least one key/value pair was submitted. It then creates an array storing the request in the 'type' index and the key/value pairs in the 'parameter' index. It then outputs a JSON encoding of that array to the terminal. Next step is to create a POST form which sends a POST request to the page to test it's handling of POST requests.
+
+Start: Tue, 10 Feb 2015 20:20:00 -0800
+End: Tue, 10 Feb 2015 20:42:58 -0800
+Tasks: Copying GET request code worked for the POST request when the POST form from another webpage submitted a POST request. loopback.php is complete.
+
+Start: Tue, 10 Feb 2015 20:43:00 -0800
+End: Tue, 10 Feb 2015 20:45:51 -0800
+Tasks: Commented out error reporting statements in loopback.php
+
+Start: Wed, 11 Feb 2015 17:50:00 -0800
+End: Wed, 11 Feb 2015 21:34:33 -0800
+Tasks: Created and completed login.php, content1.php, and content2.php. In order to create the logout link in content1.php and have it perform properly I also had to create a logout.php page. This completes assignment 4 part 1 except for the work log which I will update after completing this final commit of the code.
+
+Begin Part 2

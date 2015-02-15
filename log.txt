@@ -35,3 +35,18 @@ End: Wed, 11 Feb 2015 21:34:33 -0800
 Tasks: Created and completed login.php, content1.php, and content2.php. In order to create the logout link in content1.php and have it perform properly I also had to create a logout.php page. This completes assignment 4 part 1 except for the work log which I will update after completing this final commit of the code.
 
 Begin Part 2
+Start: Sat, 14 Feb 2015 07:45:00 -0800
+End: Sat, 14 Feb 2015 11:34:33 -0800
+Tasks: Watched all lectures and finished all readings. Created pseudo code and developed plan of small tasks to complete. Created movie_rental.php with the final layout (an 'Add Video' form and an empty table with header row for the videos). Made add_row.php function which collected all the information from the Add Video form, validated inputs, redirected and threw errors to user if inputs were not valid. Then decided to do input validation on HTML side, but kept validation in .php for additional security in case someone threw a POST request with illegal values.
+
+Start: Sat, 14 Feb 2015 19:22:00 -0800
+End: Sat, 14 Feb 2015 23:24:00 -0800
+Tasks: Troubleshot connection to GUI of OSU provided web database. Managed to get add_row.php to successfully communicate with server and add a row to the database. Began working on the movie_rental.php main page to dynamically create the table of movies from the database. Made it work querying for only title, category, and length
+
+Start: Sun, 15 Feb 2015 05:45:00 -0800
+End: Sun, 15 Feb 2015 10:00:00 -0800
+Tasks: Modify the dynamic table building code to check for null values and place a string into the table instead. Added code for the movie status (checked-out vs available) to be added to the table. Tried unsuccessfully to create buttons in php which would call php functions. Failed a couple times at this in my effort to implement the Check in/out, delete, delete all, and filter buttons.
+
+Start: Sun, 15 Feb 2015 12:14:00 -0800
+End: Sun, 15 Feb 2015 02:53:00 -0800
+Tasks: Finally figured out how to create a post form with nothing but a button in form but would still pass a value (in this case the unique movie name associated to the row) and insert that into table <td> element for the check in/out, and delete buttons. After figuring out how to create a button to pass the info I wanted, getting those functions working was rather simple. Then, quickly created the Delete all button in the table footer and implemented its functionality. Finally, had to create the filter drop down with a prepared statement call to the db which was separate from the build table call. Took a few tries to figure out how to implement the chosen filter into the already working build table function, but got it working quickly. Then, I had some trial and error to make the filter dropdown default to the last selected value after the page refreshed and the new filtered table was shown. Originally, if I chose 'Comedy' for instance, the filter button would cause the whole page to refresh which would build the correctly filtered table, but then the filter dropdown would show All Movies (because it was the first option) even though the 'Comedy' filter was applied.
